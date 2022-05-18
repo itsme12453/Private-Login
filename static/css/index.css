@@ -1,0 +1,122 @@
+body {
+    background: #171D2A;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #232935;
+    width: 280px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+br {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    width: 20%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #373F53;
+    color: #96A7AF;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* margin: 10px; */
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    box-shadow: 0 0 0px 3px #31394998;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #373F53;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 10px;
+    background: linear-gradient(#8401FF, #8100FB);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+input[type="submit"]:hover{
+    transition: 0.2s;
+    background: linear-gradient(#7300e0, #7000da);
+}
+
+.title {
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0px;
+    text-transform: capitalize;
+}
+
+.home, .text {
+    text-decoration: none;
+    color: #96A7AF;
+    font-size: 15px;
+    /* margin: 10px 0px 0px 0px; */
+    text-align: center;
+}
+
+.home:hover {
+    text-decoration: underline;
+}
+
+.container .flash_message {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 250px;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #373F53;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.219);
+    animation-name: flash_message_animation;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+@keyframes flash_message_animation {
+    0%   {opacity: 0; top: 20px;}
+    25%  {opacity: 1; top: 30px;}
+    75%  {opacity: 1; top: 30px;}
+    100% {opacity: 0; top: 40px;}
+}
